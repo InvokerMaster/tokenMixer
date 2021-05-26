@@ -1,0 +1,19 @@
+{
+    "name": "mixer-utils",
+    "version": "1.0.0",
+    "description": "",
+    "main": "build/index.js",
+    "scripts": {
+        "build": "tsc",
+        "watch": "tsc --watch"
+    },
+    "author": "Koh Wei Jie",
+    "license": "GPL-3.0-or-later",
+    "dependencies": {
+        "path": "^0.12.7",
+        "verror": "^1.10.0"
+    },
+    "devDependencies": {
+        "@types/node": "^12.0.10"
+    }
+}

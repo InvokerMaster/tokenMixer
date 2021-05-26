@@ -1,0 +1,48 @@
+default.etcd
+# prod config
+config/*-prod.yaml
+config/*-prod.yml
+config/local-dev.yaml
+config/local-dev.yml
+
+kovanPrivateKeys.json
+frontend/ts/exported_config.json
+
+verification_key.json
+backend/verification_key.json
+contracts/.privateKeys.json
+contracts/privateKeys.json
+
+**/build
+
+frontend/server.cert
+frontend/server.key
+
+contracts/.etherlime-store/
+contracts/compiled/
+contracts/.outputParameter
+frontend/dist/
+frontend/.cache/
+frontend/ts/abis
+deployedAddresses.json
+node_modules/
+lerna-debug.log
+
+# Swap
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+
+# Session
+Session.vim
+Sessionx.vim
+
+# Temporary
+.netrwhist
+*~
+# Auto-generated tag files
+tags
+# Persistent undo
+[._]*.un~

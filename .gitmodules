@@ -1,0 +1,4 @@
+[submodule "semaphore"]
+	path = semaphore
+	url = https://github.com/weijiekoh/semaphore.git
+    branch= master

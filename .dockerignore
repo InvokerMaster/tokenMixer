@@ -1,0 +1,16 @@
+**/node_modules
+**/build
+**/*.log
+**/*.md
+**/.git
+.gitattributes
+frontend/dist
+frontend/build
+frontend/.cache
+frontend/server.*
+**/package-lock.json
+contracts/compiled
+contracts/parity
+semaphore/docs
+semaphore/semaphorejs/blake2sdef.json
+kovanPrivateKeys.json

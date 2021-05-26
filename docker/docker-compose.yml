@@ -1,0 +1,58 @@
+version: '3.7'
+services: 
+  mixer-backend: 
+    container_name: mixer-backend
+
+    build:
+      context: ../backend
+
+    ports:
+      - "3000:3000"
+
+    networks:
+      - "mixer-net"
+
+    environment:
+      - NODE_ENV=docker
+
+    secrets:
+      - hotWalletPrivKeyPath
+
+  mixer-frontend:
+    container_name: mixer-frontend
+
+    build:
+      context: ../frontend
+
+    ports:
+      - "80:8001"
+
+    networks:
+      - "mixer-net"
+
+    environment:
+      - NODE_ENV=docker
+
+  mixer-etcd:
+    container_name: mixer-etcd
+
+    image: jumanjiman/etcd
+
+    ports:
+      - "2379:2000"
+
+    networks:
+      - "mixer-net"
+
+    environment:
+      - NODE_ENV=docker
+
+networks:
+  mixer-net:
+
+secrets:
+  privateKeysPath:
+    file: "../../MIXER_SECRETS/privateKeys.json"
+
+  hotWalletPrivKeyPath:
+    file: "../../MIXER_SECRETS/hotWalletPrivKey.json"
